@@ -1,0 +1,145 @@
+@import '../../styles/variable.less';
+
+.yok {
+    &-dialog {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        color: #848484;
+        z-index: 9999;
+
+        &__warp {
+            position: relative;
+            width: 86%;
+            max-height: 70vh;
+            background: #fff;
+            -webkit-border-radius: 8px;
+            border-radius: 3px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        &__body {
+            padding: 20px;
+            padding-bottom: 10px;
+        }
+
+        &__title {
+            display: block;
+            line-height: 1.5;
+            color: #2d2d2d;
+            font-size: 16px;
+            text-align: center;
+            flex-shrink: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            padding-bottom: 8px;
+        }
+
+        &__content {
+            justify-content: center;
+            overflow: auto;
+            font-size: 14px;
+            word-break: break-all;
+            padding-bottom: 10px;
+            text-align: center;
+            max-height: 45vh;
+        }
+
+        &__close {
+            color: #909399;
+        }
+
+        &__footer {
+            height: 45px;
+            width: 100%;
+            line-height: 45px;
+            display: flex;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            -webkit-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+        }
+
+        &-btn {
+            display: block;
+            width: inherit;
+            text-align: center;
+        }
+
+        &-cancel {
+            border-radius: 0 0 0 3px;
+            border-top: 1px solid #f6f6f6;
+            background: #fff;
+            background-origin: border-box;
+        }
+
+        &-ok {
+            background: @color-primary;
+            border-top: 1px solid #f6f6f6;
+            background-origin: border-box;
+            color: #fff;
+            margin-right: -1px;
+        }
+
+        &-point {
+            border-radius: 0 0 0 3px;
+            border-top: 1px solid #f6f6f6;
+            background: #fff;
+            background-origin: border-box;
+            color: red;
+        }
+    }
+}
+
+.dialog-enter-active {
+    transition: opacity 0.1s;
+}
+
+.dialog-leave-active {
+    transition: opacity 0.3s;
+}
+
+.dialog-enter,
+.dialog-leave-active {
+    opacity: 0;
+}
+
+
+
+/*v-enter 是进入之前，元素的起始状态*/
+/*v-leave-to 离开之后动画的终止状态*/
+// .dialog-enter,
+// .dialog-leave-to {
+//     opacity: 0;
+//     /*透明度*/
+//     transform: translateX(150px);
+// }
+
+// /*入场(离场)动画的时间段   */
+// .dialog-enter-active,
+// .dialog-leave-active {
+//     transition: all 0.8s ease;
+
+// }

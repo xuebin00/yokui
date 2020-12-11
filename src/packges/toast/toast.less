@@ -1,0 +1,79 @@
+.yok {
+    &-toast {
+        position: fixed;
+        left: 0;
+        bottom: 150px;
+        width: 100%;
+        text-align: center;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    &-toast-cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        height: 100%;
+    }
+
+    &-toast-inner {
+        position: relative;
+        display: inline-block;
+        max-width: 65%;
+        text-align: center;
+        line-height: 1.5;
+        padding: 10px 30px;
+        word-break: break-all;
+        background: rgba(46, 46, 46, 0.8);
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    &-toast-center {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-loading {
+        .yok-toast-inner {
+            padding: 25px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .yok-toast-icon-wrapper {
+            position: static;
+            height: 30px;
+        }
+
+        .yok-toast-text:not(:empty) {
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+
+        .yok-toast-icon {
+            width: 40px;
+            height: 40px;
+
+            &-rotate {
+                animation: rotation 2s linear infinite;
+            }
+        }
+    }
+}
+
+.toast-enter-active {
+    transition: opacity 0.1s;
+}
+
+.toast-leave-active {
+    transition: opacity 0.3s;
+}
+
+.toast-enter,
+.toast-leave-active {
+    opacity: 0;
+}

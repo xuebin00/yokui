@@ -1,0 +1,22 @@
+@color-text-primary: #333;
+@color-text-regular: #666;
+@color-primary: #409EFF;
+@color-success: #67C23A;
+@color-warning: #E6A23C;
+@color-danger: #F56C6C;
+@color-info: #909399;
+
+.is {
+
+    &-loading,
+    &-disabled {
+        cursor: not-allowed;
+    }
+}
+
+.transform(@x, @y) {
+    transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+}

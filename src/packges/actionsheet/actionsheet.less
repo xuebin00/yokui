@@ -1,0 +1,75 @@
+@import '../../styles/variable.less';
+
+.yok {
+    &-actionsheet {
+
+        &__warp {
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            max-height: 100%;
+            line-height: 20px;
+
+            font-size: 16px;
+            color: #2d2d2d;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: #fff;
+            padding-bottom: 10px;
+        }
+
+        &-menu {
+            width: 100%;
+            background-color: #fff;
+        }
+
+        &-item {
+            padding: 10px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #2d2d2d;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 1px solid #f6f6f6;
+        }
+
+        &-cancel {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #2d2d2d;
+            text-align: center;
+            background-color: #fff;
+            border-top: 7px solid #f6f6f6;
+            color: red;
+        }
+    }
+}
+
+.actionsheet-enter-active {
+    .transform(0, 0);
+    animation: actionsheet-in .3s;
+}
+
+.actionsheet-leave-active {
+
+    animation: actionsheet-in .3s reverse;
+    -webkit-animation: actionsheet-in .3s reverse;
+    -moz-animation: actionsheet-in .3s reverse;
+    -o-animation: actionsheet-in .3s reverse;
+
+}
+
+@keyframes actionsheet-in {
+    0% {
+        .transform(0, 100%);
+    }
+
+    100% {
+        .transform(0, 0);
+    }
+}

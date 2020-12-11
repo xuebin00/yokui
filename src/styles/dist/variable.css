@@ -1,0 +1,4 @@
+.is-loading,
+.is-disabled {
+  cursor: not-allowed;
+}

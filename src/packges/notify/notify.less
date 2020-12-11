@@ -1,0 +1,55 @@
+@import '../../styles/variable.less';
+
+.yok {
+    &-notify {
+        position: fixed;
+        left: 0;
+        top: 0px;
+        z-index: 9999;
+        width: 100%;
+        max-height: 100%;
+        line-height: 20px;
+
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        padding: 10px 16px;
+        box-sizing: border-box;
+        // transition: top 0.8s;
+    }
+
+    &-primary {
+        background-color: lighten(@color-primary, 10%);
+    }
+
+    &-success {
+        background-color: lighten(@color-success, 10%);
+    }
+
+    &-warning {
+        background-color: lighten(@color-warning, 10%);
+    }
+
+    &-danger {
+        background-color: lighten(@color-danger, 10%);
+    }
+}
+
+.notify-enter-active {
+    transform: translate(0, 0);
+    animation: notify-in .3s;
+}
+
+.notify-leave-active {
+    animation: notify-in .3s reverse;
+}
+
+@keyframes notify-in {
+    0% {
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

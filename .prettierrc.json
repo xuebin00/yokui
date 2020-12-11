@@ -1,0 +1,10 @@
+{
+    "tabWidth": 3,
+    "useTabs": false,
+    "endOfLine": "auto",
+    "singleQuote": false,
+    "semi": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "eslint.autoFixOnSave": true
+}

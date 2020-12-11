@@ -1,0 +1,210 @@
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+/* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+/* form elements 表单元素 */
+th,
+td
+
+/* table elements 表格元素 */
+	{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "jianytibold";
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea
+
+/* for ie */
+	{
+	font-size: 14px;
+	color: #000;
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* 统一等宽字体 */
+small {
+	font-size: 12px;
+}
+
+/* 小于 12px 的中文很难阅读, 让 small 正常化 */
+
+/** 重置列表元素 **/
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+/** 重置文本格式元素 **/
+a {
+	text-decoration: none;
+	outline: none;
+	color: #333;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-decoration: none;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+/* 重置, 减少对行高的影响 */
+sub {
+	vertical-align: text-bottom;
+}
+
+/** 重置表单元素 **/
+legend {
+	color: #000;
+}
+
+/* for ie6 */
+fieldset,
+img {
+	border: 0;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 重置 HTML5 元素 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+mark {
+	background: #ff0;
+}
+
+/*input的自带样式*/
+// input{-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;outline:none;}
+input {
+	outline: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+[v-cloak] {
+	display: none !important;
+}
+
+// 背景阴影
+.yokFade-enter,
+.yokFade-leave-to {
+	opacity: 0;
+}
+
+.yokFade-enter-active,
+.yokFade-leave-active {
+	transition: all 0.6s ease;
+}
+
+.yok {
+	&-mask {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 9000;
+	}
+}
